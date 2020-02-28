@@ -4,7 +4,7 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v2.4.0/contr
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v2.4.0/contracts/token/ERC20/ERC20Detailed.sol";
 
 contract Token is ERC20, ERC20Detailed {
-    constructor() public ERC20Detailed("Token", "TKN", 18) {
-        _mint(msg.sender, 1000000 * (10**uint256(decimals())));
+    constructor() public ERC20Detailed("Yolo Coin", "YOLO", 18) {
+        _mint(msg.sender, 1000 * (10**uint256(decimals())));
     }
 }

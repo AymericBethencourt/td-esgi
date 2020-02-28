@@ -1,12 +1,7 @@
 pragma solidity 0.5.12;
 
 contract Lottery {
-    address public manager;
     address payable[] public players;
-
-    constructor() public {
-        manager = msg.sender;
-    }
 
     function enter() public payable {
         require(msg.value >= 1 ether, "Miniumun amount not met");
@@ -20,15 +15,7 @@ contract Lottery {
             );
     }
 
-    modifier restricted() {
-        require(
-            msg.sender == manager,
-            "You are not the owner of this contract"
-        );
-        _;
-    }
-
-    function pickWinner() public restricted {
+    function pickWinner() public {
         uint256 index = random() % players.length;
         players[index].transfer(address(this).balance);
         players = new address payable[](0);

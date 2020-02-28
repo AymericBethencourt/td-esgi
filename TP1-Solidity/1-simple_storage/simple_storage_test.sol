@@ -11,22 +11,16 @@ contract SimpleStorageTest {
         simpleStorageToTest = new SimpleStorage(42);
     }
 
-    function checkInitialValue() public returns (bool) {
-        return
-            Assert.equal(
-                simpleStorageToTest.get(),
-                42,
-                "Initial value is not correct"
-            );
+    function checkInitialValue() public {
+        Assert.equal(
+            simpleStorageToTest.get(),
+            42,
+            "Initial value is not correct"
+        );
     }
 
-    function checkSettingAValue() public returns (bool) {
+    function checkSettingAValue() public {
         simpleStorageToTest.set(43);
-        return
-            Assert.equal(
-                simpleStorageToTest.get(),
-                43,
-                "Set value is not correct"
-            );
+        Assert.equal(simpleStorageToTest.get(), 43, "Set value is not correct");
     }
 }
