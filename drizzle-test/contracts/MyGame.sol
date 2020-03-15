@@ -6,7 +6,7 @@ contract MyGame is ERC721 {
     struct Item {
         string name;
         uint256 level;
-        uint256 rarityLevel;
+        uint256 rarity;
     }
 
     Item[] public items;
@@ -26,5 +26,9 @@ contract MyGame is ERC721 {
     function transferItem(address _from, address _to, uint256 _id) public {
         require(items.length >= _id, "ID not available");
         transferFrom(_from, _to, _id);
+    }
+
+    function getItemCount() public view returns (uint256) {
+        return items.length;
     }
 }

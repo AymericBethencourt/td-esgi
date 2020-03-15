@@ -6,7 +6,7 @@ contract MyGame is ERC721 {
     struct Item {
         string name;
         uint256 level;
-        uint256 rarityLevel;
+        uint256 rarity;
     }
 
     Item[] public items;

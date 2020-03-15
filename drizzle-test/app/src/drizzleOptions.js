@@ -5,6 +5,7 @@ import SimpleStorage from "./contracts/SimpleStorage.json";
 import MyToken from "./contracts/MyToken.json";
 import HelloWorld from "./contracts/HelloWorld.json";
 import MyGame from "./contracts/MyGame.json";
+import ShipBattle from "./contracts/ShipBattle.json";
 
 const options = {
   web3: {
@@ -18,7 +19,7 @@ const options = {
       42 // Kovan
     ]
   },
-  contracts: [SimpleStorage, Lottery, MyToken, HelloWorld, MyGame],
+  contracts: [SimpleStorage, Lottery, MyToken, HelloWorld, MyGame, ShipBattle],
   events: {
     SimpleStorage: ["StorageSet"]
   }

@@ -3,6 +3,7 @@ const MyToken = artifacts.require("MyToken");
 const HelloWorld = artifacts.require("HelloWorld");
 const Lottery = artifacts.require("Lottery");
 const MyGame = artifacts.require("MyGame");
+const ShipBattle = artifacts.require("ShipBattle");
 
 module.exports = function(deployer) {
   deployer.deploy(HelloWorld);
@@ -10,4 +11,5 @@ module.exports = function(deployer) {
   deployer.deploy(Lottery);
   deployer.deploy(MyToken);
   deployer.deploy(MyGame);
+  deployer.deploy(ShipBattle);
 };
