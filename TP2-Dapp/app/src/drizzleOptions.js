@@ -1,5 +1,7 @@
 import Web3 from "web3";
 
+import HelloWorld from "./contracts/HelloWorld.json";
+
 const options = {
   web3: {
     block: false,
@@ -12,7 +14,7 @@ const options = {
       42 // Kovan
     ]
   },
-  contracts: [],
+  contracts: [HelloWorld],
   events: {
     SimpleStorage: ["StorageSet"]
   }

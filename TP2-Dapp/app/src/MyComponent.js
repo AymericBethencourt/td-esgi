@@ -1,6 +1,5 @@
 import React from "react";
 import { newContextComponents } from "@drizzle/react-components";
-import { Card } from "../src/ships/Card/Card.controller";
 
 const { AccountData, ContractData, ContractForm } = newContextComponents;
 
@@ -12,6 +11,7 @@ export default ({ drizzle, drizzleState }) => {
         <h2>Active Account</h2>
         <AccountData drizzle={drizzle} drizzleState={drizzleState} accountIndex={0} units="ether" precision={3} />
       </div>
+      {/* // Start coding here */}
     </div>
   );
 };
