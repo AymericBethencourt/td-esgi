@@ -164,7 +164,7 @@ export default ({ drizzle, drizzleState }) => {
           Call function <b>transferShip</b>
         </p>
         <ContractForm drizzle={drizzle} contract="ShipBattle" method="transferShip" />
-        <p>
+        {/* <p>
           Call function <b>getShipName(0)</b>
         </p>
         <ContractData
@@ -198,7 +198,7 @@ export default ({ drizzle, drizzleState }) => {
             return <div />;
           }}
         />
-        <Card shipCode="101301" />
+        <Card shipCode="101301" /> */}
       </div>
     </div>
   );

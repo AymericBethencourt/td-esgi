@@ -88,14 +88,11 @@ Metamask : https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehle
 
 1- Install all the requirements above. For this TP, we are going to user the Truffle suite. Quickly read its website https://www.trufflesuite.com/ to understand its 3 mains components : Truffle, Ganache and Drizzle
 
-2- Run Ganache. Play with it a little to understand how it works. Then git clone the boilerpplate application under _TP2-Dapp/1-DappContracts_. In Ganache, go to Settings, then under Truffle Projects, add the current project. Then back in Ganache, under contracts, notice the HelloWorld contract is there as **Not Deployed**
+2- Run Ganache. Play with it a little to understand how it works. Then git clone the boilerpplate application under _TP2-Dapp_. Run _npm install_ then _cd app_ and _npm install_ again. In Ganache, go to Settings, then under Truffle Projects, add the current project. Then back in Ganache, under contracts, notice the HelloWorld contract is there as **Not Deployed**
 In 1-DappContracts under contracts, notice the HelloWorld.sol smart contract from the previous TD in the folder **contracts**. To compile it, run **truffle compile** in the terminal.
 To deploy it, run **truffle migrate --reset** in the terminal. Notice in ganache that the Current Block Number has increased and that HelloWorld now shows a deployement address. Now run the application (You may need to install dependencies first). On http://localhost:3000/ you should see your active account and balance (corresponding to first account in Ganache Accounts).
 
 3- In **app/src/MyComponent.js**, below the active account, implement a react component to shows the return of the HelloWorld contract. For this, use Drizzle react components : https://www.trufflesuite.com/docs/drizzle/react/react-components
-
-// todo
-[[[4- Write tests]]]
 
 ### Exercice 2 : Simple Storage
 
@@ -144,8 +141,6 @@ To deploy it, run **truffle migrate --reset** in the terminal. Notice in ganache
 1- Create a **ShipBattle.sol** contract that implements ERC721. Create a ship factory that creates ships with random attributes of your choice. Create a battle function and implements it as you want. Define other functions, etc... This exercise is open-ended, develop what you want :)
 
 Stop at 16h and proceed to the evaluation project.
-
-### Evaluation
 
 ### Evaluation
 

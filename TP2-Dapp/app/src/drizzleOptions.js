@@ -10,7 +10,7 @@ import ShipBattle from "./contracts/ShipBattle.json";
 const options = {
   web3: {
     block: false,
-    customProvider: new Web3("ws://localhost:7545"),
+    customProvider: new Web3("ws://localhost:8545"),
     networkWhitelist: [
       1, // Mainnet
       3, // Ropsten
