@@ -140,13 +140,29 @@ PS: For fast recompiling and deploying, use the concatenated command below :
 
 2- In **app/src/MyComponent.js**, below the MyToken component, implement a react component to shows the list of items.
 
-- Implement a form component to call the **createItem** function.
+3- Implement a form component to call the **createItem** function.
 
-- Implement a form component to call the **transferItem** function.
+4- Implement a form component to call the **transferItem** function.
 
 ### Exercice 6 : ShipBattle(ERC721)
 
-1- Create a **ShipBattle.sol** contract that implements ERC721. Create a ship factory that creates ships with random attributes of your choice. Create a battle function and implements it as you want. Define other functions, etc... This exercise is open-ended, develop what you want :)
+1- Copy/paste the **ShipBattle.sol** file from the previous TP in TP1-Solidity to your app contracts. Take the ERC721 implementation from OpenZepellin. Compile and deploy it using Truffle. Check its address in Ganache.
+
+2- In **app/src/MyComponent.js**, below the MyToken component, implement a react component to shows the list of items.
+
+3- Display the number of created ships from **getShipCount**
+
+4- Implement a form component to call the **createShip** function.
+
+5- Implement a form component to call the **transferShip** function.
+
+6- Display the latest ship name using **getShipName**
+
+7- Display the latest ship attributes code using **getShipCode**
+
+8- Display the latest ship attributes illustration using the provided custom component `<Card shipCode={shipCode} />`
+
+9- Continue adding functions of your choice to the smart contract and to the Dapp. There is a simple example of ships battle. Maybe implement it in the Dapp with an illustration, or modify the battle so that the winner wins attributes and the looser looses attributes, etc... This exercise is open-ended, develop what you want :)
 
 Stop at 16h and proceed to the evaluation project.
 
