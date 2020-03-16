@@ -18,6 +18,21 @@ export default ({ drizzle, drizzleState }) => {
           <ContractData drizzle={drizzle} drizzleState={drizzleState} contract="HelloWorld" method="speak" />
         </p>
       </div>
+      <div className="section">
+        <h2>SimpleStorage</h2>
+        <p>
+          Value of <b>storedData</b>:&nbsp;
+          <ContractData drizzle={drizzle} drizzleState={drizzleState} contract="SimpleStorage" method="storedData" />
+        </p>
+        <p>
+          Return of <b>get</b>:&nbsp;
+          <ContractData drizzle={drizzle} drizzleState={drizzleState} contract="SimpleStorage" method="get" />
+        </p>
+        <p>
+          Call function <b>set</b>
+        </p>
+        <ContractForm drizzle={drizzle} contract="SimpleStorage" method="set" />
+      </div>
     </div>
   );
 };
