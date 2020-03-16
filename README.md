@@ -86,7 +86,7 @@ Metamask : https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehle
 
 ### Exercice 1 : Hello world
 
-1- Install all the requirements above. For this TP, we are going to user the Truffle suite. Quickly read the website https://www.trufflesuite.com/ to understand its 3 main components : Truffle, Ganache and Drizzle
+1- Install all the requirements above. For this TP, we are going to use the Truffle suite. Quickly read the website https://www.trufflesuite.com/ to understand its 3 main components : Truffle, Ganache and Drizzle
 
 2- Install and run Ganache. Play with it a little to understand how it works. Then git clone the boilerpplate application under _TP2-Dapp_. Inside, run _npm install_ to install the truffle dependencies, then _cd app_ which is the frontend and _npm install_ again to install the frontend dependencies. In Ganache, go to Settings, then under Truffle Projects, add the current project.
 
@@ -102,6 +102,8 @@ PS: For fast recompiling and deploying, use the concatenated command below :
  truffle compile && truffle migrate --reset && npm start
 ```
 
+4- Dans le dossier **test**, ecrire les tests en Solidity avec truffle, puis ecrire les meme tests mais en Javascript.
+
 ### Exercice 2 : Simple Storage
 
 1- Copy/paste the **SimpleStorage.sol** file from the previous TP in TP1-Solidity to your app contracts. Compile and deploy it using Truffle. Check its address in Ganache.
@@ -109,6 +111,8 @@ PS: For fast recompiling and deploying, use the concatenated command below :
 2- In **app/src/MyComponent.js**, below the HelloWorld component, implement a react component to shows the current value held by storedData.
 
 3- Implement a form component to call the **set** function. Notice that drizzle automatically update the frontend view when the stored data changes.
+
+4- Dans le dossier **test**, ecrire les tests en Solidity avec truffle, puis ecrire les meme tests mais en Javascript.
 
 ### Exercice 3 : Lottery
 
@@ -121,6 +125,8 @@ PS: For fast recompiling and deploying, use the concatenated command below :
 4- Implement a form component to call the **enter** function as another player address.
 
 5- Implement a form component to call the **pickWinner** function.
+
+6- Dans le dossier **test**, ecrire les tests en Solidity avec truffle, puis ecrire les meme tests mais en Javascript.
 
 ### Exercice 4 : MyToken(ERC20)
 
