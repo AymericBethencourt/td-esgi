@@ -11,11 +11,13 @@ Nothing to install, just go to https://remix.ethereum.org/ and start the exercis
 
 ### Exercice 1 : Hello world
 
-1- In remix, create an **HelloWorld.sol** smart contract that simply returns the string "Hello ESGI"
+1- In remix, create an **HelloWorld.sol** smart contract with a **speak** function that simply returns the string "Hello ESGI"
 
-2- Create another contract **HelloWorldTest.sol** that will test the output of the **HelloWorld.sol** contract. Check how to write unit tests on https://remix-ide.readthedocs.io/en/latest/unittesting.html
+2- Create another contract **HelloWorld_test.sol** that will test the output of the **HelloWorld.sol** contract. Check how to write unit tests in Remix on https://remix-ide.readthedocs.io/en/latest/unittesting.html
 
-3- Deploy the contract on a testnet.
+3- Deploy the contract on the Javascript VM. Call the speak function.
+
+4- Deploy the contract on the Ropsten test network using Metamask (select Injected web3 in Remix). You will need to hold a Ether balance in Ropsten to deploy. To get test Ethers, use https://faucet.ropsten.be/
 
 ### Exercice 2 : Simple Storage
 
@@ -25,7 +27,7 @@ Nothing to install, just go to https://remix.ethereum.org/ and start the exercis
 
 3- Create a **set** function that sets the number to a given value.
 
-4- Create a **SimpleStorageTest.sol** contract that will test your getter and setter functions.
+4- Create a **SimpleStorage_test.sol** contract that will test your getter and setter functions.
 
 ### Exercice 3 : Lottery
 
@@ -37,7 +39,7 @@ Nothing to install, just go to https://remix.ethereum.org/ and start the exercis
 
 4- Modify the contract so only the creator of the contract can call the pickWinner function.
 
-5- Create a **LotteryTest.sol** contract that will test your Lottery functions.
+5- Create a **Lottery_test.sol** contract that will test your Lottery functions.
 
 ### Exercice 4 : MyToken
 
@@ -45,7 +47,7 @@ Nothing to install, just go to https://remix.ethereum.org/ and start the exercis
 
 2- Create a **transfer** function that transfer tokens from one user to another. Make sure the sender has sufficient funds.
 
-3- Create a **MyTokenTest.sol** contract that will test your Token transfer.
+3- Create a **MyToken_test.sol** contract that will test your Token transfer.
 
 ### Exercice 5 : MyToken(ERC20)
 
