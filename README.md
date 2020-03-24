@@ -1,9 +1,9 @@
 # TD ESGI
 
 Documentation :  
-Solidity : https://solidity.readthedocs.io/en/v0.5.16/index.html  
-Remix : https://remix-ide.readthedocs.io/en/latest/
-Truffle : https://www.trufflesuite.com/
+Solidity : https://solidity.readthedocs.io/en/v0.5.15/  
+Remix (TD 1): https://remix-ide.readthedocs.io/en/latest/  
+Truffle (TD 2): https://www.trufflesuite.com/
 
 ## TD 1 - Solidity
 
@@ -13,7 +13,7 @@ Nothing to install, just go to https://remix.ethereum.org/ and start the exercis
 
 1- In remix, create an **HelloWorld.sol** smart contract that simply returns the string "Hello ESGI"
 
-2- Create another contract **HelloWorldTest.sol** that will test the output of the **HelloWorld.sol** contract.
+2- Create another contract **HelloWorldTest.sol** that will test the output of the **HelloWorld.sol** contract. Check how to write unit tests on https://remix-ide.readthedocs.io/en/latest/unittesting.html
 
 3- Deploy the contract on a testnet.
 
