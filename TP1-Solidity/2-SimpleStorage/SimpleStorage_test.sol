@@ -1,6 +1,5 @@
 pragma solidity 0.5.16;
 
-// eslint-disable-next-line no-alert, quotes, semi
 import "remix_tests.sol";
 import "./SimpleStorage.sol";
 
