@@ -182,6 +182,18 @@ export default ({ drizzle, drizzleState }) => {
                 <p>
                   Latest ship code illustration <b>getShipCode + render</b>
                 </p>
+                <ContractData
+                  drizzle={drizzle}
+                  drizzleState={drizzleState}
+                  contract="ShipBattle"
+                  method="getShipCode"
+                  methodArgs={[shipCount - 1]}
+                  render={e => {
+                    console.log(e);
+                    const shipCode = "" + e.class + e.cabin + e.engine + e.guns + e.wings + e.flame;
+                    return <Card shipCode={shipCode} />;
+                  }}
+                />
               </div>
             ) : (
               <div>No ship created yet</div>
