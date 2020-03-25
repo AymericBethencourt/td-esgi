@@ -146,13 +146,13 @@ PS: For fast recompiling and deploying, use the concatenated command below :
 
 2- In **app/src/MyComponent.js**, below the MyToken component, implement a react component to shows the list of items.
 
-3- Display the number of created ships from **getShipCount**
+3- Implement a form component to call the **createShip** function.
 
-4- Implement a form component to call the **createShip** function.
+4- Implement a form component to call the **transferShip** function.
 
-5- Implement a form component to call the **transferShip** function.
+5- Display the number of created ships from **getShipCount**
 
-6- Display the LATEST CREATED ship name using **getShipName**
+6- Display the LATEST CREATED ship name using **getShipName**. Notice the componant craches if there is no ship created yet. For this, you need to modify the **render** method of **getShipCount** in question 5 in order to display **getShipName** only if there is at least one ship created.
 
 7- Display the LATEST CREATED ship attributes code using **getShipCode**
 
