@@ -128,8 +128,6 @@ PS: For fast recompiling and deploying, use the concatenated command below :
 
 5- Implement a form component to call the **pickWinner** function.
 
-6- Dans le dossier **test**, ecrire les tests en Solidity avec truffle, puis ecrire les meme tests mais en Javascript.
-
 ### Exercice 4 : MyToken(ERC20)
 
 1- Copy/paste the **MyToken.sol** file from the previous TP in TP1-Solidity to your app contracts. Take the ERC20 implementation from OpenZepellin. Compile and deploy it using Truffle. Check its address in Ganache.
@@ -142,17 +140,7 @@ PS: For fast recompiling and deploying, use the concatenated command below :
 
 5- Implement a form component to call the **transfer** function.
 
-### Exercice 5 : MyGame(ERC721)
-
-1- Copy/paste the **MyGame.sol** file from the previous TP in TP1-Solidity to your app contracts. Take the ERC721 implementation from OpenZepellin. Compile and deploy it using Truffle. Check its address in Ganache.
-
-2- In **app/src/MyComponent.js**, below the MyToken component, implement a react component to shows the list of items.
-
-3- Implement a form component to call the **createItem** function.
-
-4- Implement a form component to call the **transferItem** function.
-
-### Exercice 6 : ShipBattle(ERC721)
+### Exercice 5 : ShipBattle(ERC721)
 
 1- Copy/paste the **ShipBattle.sol** file from the previous TP in TP1-Solidity to your app contracts. Take the ERC721 implementation from OpenZepellin. Compile and deploy it using Truffle. Check its address in Ganache.
 
@@ -164,11 +152,11 @@ PS: For fast recompiling and deploying, use the concatenated command below :
 
 5- Implement a form component to call the **transferShip** function.
 
-6- Display the latest ship name using **getShipName**
+6- Display the LATEST CREATED ship name using **getShipName**
 
-7- Display the latest ship attributes code using **getShipCode**
+7- Display the LATEST CREATED ship attributes code using **getShipCode**
 
-8- Display the latest ship attributes illustration using the provided custom component `<Card shipCode={shipCode} />`
+8- Display the LATEST CREATED ship illustration using the provided custom react component `<Card shipCode={shipCode} />` where shipCode is string representing the non-fungible token, such as "112343" or "001342".
 
 9- Continue adding functions of your choice to the smart contract and to the Dapp. There is a simple example of ships battle. Maybe implement it in the Dapp with an illustration, or modify the battle so that the winner wins attributes and the looser looses attributes, etc... This exercise is open-ended, develop what you want :)
 
