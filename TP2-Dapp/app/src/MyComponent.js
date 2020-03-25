@@ -36,6 +36,35 @@ export default ({ drizzle, drizzleState }) => {
         </p>
         <ContractForm drizzle={drizzle} contract="SimpleStorage" method="set" />
       </div>
+
+      <div className="section">
+        <h2>Lottery</h2>
+        <p>
+          Value of <b>manager</b>:&nbsp;
+          <ContractData drizzle={drizzle} drizzleState={drizzleState} contract="Lottery" method="manager" />
+        </p>
+        <p>
+          Value of <b>players</b>:&nbsp;
+          <ContractData drizzle={drizzle} drizzleState={drizzleState} contract="Lottery" method="getPlayers" />
+        </p>
+        <p>
+          Call function <b>enter</b>
+        </p>
+        <ContractForm drizzle={drizzle} contract="Lottery" method="enter" sendArgs={{ value: 1000000000000000000 }} />
+        <p>
+          Call function <b>enter</b> as {drizzleState.accounts[1]}
+        </p>
+        <ContractForm
+          drizzle={drizzle}
+          contract="Lottery"
+          method="enter"
+          sendArgs={{ from: drizzleState.accounts[1], value: 1000000000000000000 }}
+        />
+        <p>
+          Call function <b>pickWinner</b>
+        </p>
+        <ContractForm drizzle={drizzle} contract="Lottery" method="pickWinner" />
+      </div>
     </div>
   );
 };
