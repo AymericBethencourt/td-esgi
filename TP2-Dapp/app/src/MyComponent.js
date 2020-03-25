@@ -127,6 +127,33 @@ export default ({ drizzle, drizzleState }) => {
           labels={["To Address", "Amount to Send"]}
         />
       </div>
+
+      <div className="section">
+        <h2>ShipBattle</h2>
+        <p>
+          Value of <b>getShipCount</b>
+        </p>
+        <ContractData
+          drizzle={drizzle}
+          drizzleState={drizzleState}
+          contract="ShipBattle"
+          method="getShipCount"
+          //methodArgs={[{ from: drizzleState.accounts[0] }]}
+        />
+        <p>
+          Call function <b>createShip</b>
+        </p>
+        <ContractForm drizzle={drizzle} contract="ShipBattle" method="createShip" sendArgs={{ gas: 3000000 }} />
+        <p>
+          Call function <b>transferShip</b>
+        </p>
+        <ContractForm drizzle={drizzle} contract="ShipBattle" method="transferShip" />
+
+        <p>
+          Display <b>getShipCount</b>
+        </p>
+        <ContractData drizzle={drizzle} drizzleState={drizzleState} contract="ShipBattle" method="getShipCount" />
+      </div>
     </div>
   );
 };
