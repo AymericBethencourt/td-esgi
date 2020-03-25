@@ -90,13 +90,14 @@ Metamask : https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehle
 
 1- Install all the requirements above. For this TP, we are going to use the Truffle suite. Quickly read the website https://www.trufflesuite.com/ to understand its 3 main components : Truffle, Ganache and Drizzle
 
-2- Install and run Ganache. Play with it a little to understand how it works. Then git clone the boilerpplate application under _TP2-Dapp_. Inside, run _npm install_ to install the truffle dependencies, then _cd app_ which is the frontend and _npm install_ again to install the frontend dependencies. In Ganache, go to Settings, then under Truffle Projects, add the current project.
+2- Install and run Ganache. Play with it a little to understand how it works. Then git clone the boilerpplate application under _TP2-Dapp_. Inside, run _npm install_ to install the truffle dependencies, then _cd app_ which is the frontend and _npm install_ again to install the frontend dependencies.
 
-Then back in Ganache, under contracts, notice the HelloWorld contract is there as **Not Deployed**
+3- Back in Ganache, under contracts, you should see "NO PROJECTS IN WORKSPACE", click "Link truffle projects" and select the folder containing **truffle-config.js**.
+notice the HelloWorld contract is there as **Not Deployed**
 In the source code under contracts, notice the HelloWorld.sol smart contract from the previous TD in the folder **contracts**. To compile it, run **truffle compile** in the terminal.
 To deploy it, run **truffle migrate --reset** in the terminal. Notice in ganache that the Current Block Number has increased and that HelloWorld now shows a deployement address. Now run the frontend from the app folder. On http://localhost:3000/ you should see your active account and balance (corresponding to first account in Ganache Accounts).
 
-3- In **app/src/MyComponent.js**, below the active account, implement a react component to shows the return of the HelloWorld contract. For this, use Drizzle react components : https://www.trufflesuite.com/docs/drizzle/react/react-components
+4- In **app/src/MyComponent.js**, below the active account, implement a react component to shows the return of the HelloWorld contract. For this, use Drizzle react components : https://www.trufflesuite.com/docs/drizzle/react/react-components
 
 PS: For fast recompiling and deploying, use the concatenated command below :
 
