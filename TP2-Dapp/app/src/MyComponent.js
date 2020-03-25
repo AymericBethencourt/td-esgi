@@ -149,10 +149,45 @@ export default ({ drizzle, drizzleState }) => {
         </p>
         <ContractForm drizzle={drizzle} contract="ShipBattle" method="transferShip" />
 
-        <p>
-          Display <b>getShipCount</b>
-        </p>
-        <ContractData drizzle={drizzle} drizzleState={drizzleState} contract="ShipBattle" method="getShipCount" />
+        <p>Display only if getShipCount > 0 :</p>
+        <ContractData
+          drizzle={drizzle}
+          drizzleState={drizzleState}
+          contract="ShipBattle"
+          method="getShipCount"
+          render={shipCount => {
+            console.log("shipCount" + shipCount);
+            return shipCount > 0 ? (
+              <div>
+                <p>
+                  Latest ship name <b>getShipName</b>
+                </p>
+                <ContractData
+                  drizzle={drizzle}
+                  drizzleState={drizzleState}
+                  contract="ShipBattle"
+                  method="getShipName"
+                  methodArgs={[shipCount - 1]}
+                />
+                <p>
+                  Latest ship code <b>getShipCode</b>
+                </p>
+                <ContractData
+                  drizzle={drizzle}
+                  drizzleState={drizzleState}
+                  contract="ShipBattle"
+                  method="getShipCode"
+                  methodArgs={[shipCount - 1]}
+                />
+                <p>
+                  Latest ship code illustration <b>getShipCode + render</b>
+                </p>
+              </div>
+            ) : (
+              <div>No ship created yet</div>
+            );
+          }}
+        />
       </div>
     </div>
   );
