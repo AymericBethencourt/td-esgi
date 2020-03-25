@@ -12,7 +12,14 @@ export default ({ drizzle, drizzleState }) => {
         <h2>Active Account</h2>
         <AccountData drizzle={drizzle} drizzleState={drizzleState} accountIndex={0} units="ether" precision={3} />
       </div>
-      {/* Start coding here */}
+
+      <div className="section">
+        <h2>HelloWorld</h2>
+        <p>
+          Return of the <b>speak</b> function:&nbsp;
+          <ContractData drizzle={drizzle} drizzleState={drizzleState} contract="HelloWorld" method="speak" />
+        </p>
+      </div>
     </div>
   );
 };
