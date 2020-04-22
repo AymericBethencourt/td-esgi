@@ -15,13 +15,13 @@ const options = {
       3, // Ropsten
       4, // Rinkeby
       5, // Goerli
-      42 // Kovan
-    ]
+      42, // Kovan
+    ],
   },
   contracts: [HelloWorld, SimpleStorage, Lottery, MyToken, ShipBattle],
   events: {
-    SimpleStorage: ["StorageSet"]
-  }
+    SimpleStorage: ["StorageSet"],
+  },
 };
 
 export default options;
