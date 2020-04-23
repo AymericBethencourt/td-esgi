@@ -127,6 +127,55 @@ export default ({ drizzle, drizzleState }) => {
           labels={["To Address", "Amount to Send"]}
         />
       </div>
+
+      <div className="section">
+        <h2>ShipBattle</h2>
+        <p>
+          Value of <b>getShipCount</b>
+        </p>
+        <ContractData
+          drizzle={drizzle}
+          drizzleState={drizzleState}
+          contract="ShipBattle"
+          method="getShipCount"
+          //methodArgs={[{ from: drizzleState.accounts[0] }]}
+        />
+        <p>
+          Call function <b>createShip</b>
+        </p>
+        <ContractForm drizzle={drizzle} contract="ShipBattle" method="createShip" sendArgs={{ gas: 3000000 }} />
+        <p>
+          Call function <b>transferShip</b>
+        </p>
+        <ContractForm drizzle={drizzle} contract="ShipBattle" method="transferShip" />
+
+        <p>Display only if getShipCount > 0 :</p>
+        <ContractData
+          drizzle={drizzle}
+          drizzleState={drizzleState}
+          contract="ShipBattle"
+          method="getShipCount"
+          render={(shipCount) => {
+            console.log("shipCount" + shipCount);
+            return shipCount > 0 ? (
+              <div>
+                <p>
+                  Latest ship name <b>getShipName</b>
+                </p>
+                <ContractData
+                  drizzle={drizzle}
+                  drizzleState={drizzleState}
+                  contract="ShipBattle"
+                  method="getShipName"
+                  methodArgs={[shipCount - 1]}
+                />
+              </div>
+            ) : (
+              <div>No ship created yet</div>
+            );
+          }}
+        />
+      </div>
     </div>
   );
 };
