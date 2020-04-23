@@ -108,7 +108,11 @@ PS: For fast recompiling and deploying, use the concatenated command below :
  truffle compile && truffle migrate --reset && npm start
 ```
 
-4- Dans le dossier **test**, ecrire les tests en Solidity avec truffle, puis ecrire les meme tests mais en Javascript.
+4- Dans le dossier **test**, ecrire les tests en Solidity avec truffle, puis ecrire les meme tests mais en Javascript. To run the tests :
+
+```
+ truffle test
+```
 
 ### Exercice 2 : Simple Storage
 
