@@ -65,6 +65,68 @@ export default ({ drizzle, drizzleState }) => {
         </p>
         <ContractForm drizzle={drizzle} contract="Lottery" method="pickWinner" />
       </div>
+
+      <div className="section">
+        <h2>MyToken</h2>
+        <p>
+          <strong>Total Supply: </strong>
+          <ContractData
+            drizzle={drizzle}
+            drizzleState={drizzleState}
+            contract="MyToken"
+            method="totalSupply"
+            //methodArgs={[{ from: drizzleState.accounts[0] }]}
+          />{" "}
+          <ContractData
+            drizzle={drizzle}
+            drizzleState={drizzleState}
+            contract="MyToken"
+            method="symbol"
+            hideIndicator
+          />
+        </p>
+        <p>
+          <strong>My Balance: </strong>
+          <ContractData
+            drizzle={drizzle}
+            drizzleState={drizzleState}
+            contract="MyToken"
+            method="balanceOf"
+            methodArgs={[drizzleState.accounts[0]]}
+          />{" "}
+          <ContractData
+            drizzle={drizzle}
+            drizzleState={drizzleState}
+            contract="MyToken"
+            method="symbol"
+            hideIndicator
+          />
+        </p>
+        <p>
+          <strong>Balance of {drizzleState.accounts[1]}:</strong>
+          <ContractData
+            drizzle={drizzle}
+            drizzleState={drizzleState}
+            contract="MyToken"
+            method="balanceOf"
+            methodArgs={[drizzleState.accounts[1]]}
+          />{" "}
+          <ContractData
+            drizzle={drizzle}
+            drizzleState={drizzleState}
+            contract="MyToken"
+            method="symbol"
+            hideIndicator
+          />
+        </p>
+        <h3>Send Tokens</h3>
+        <ContractForm
+          drizzle={drizzle}
+          contract="MyToken"
+          method="transfer"
+          labels={["To Address", "Amount to Send"]}
+        />
+      </div>
     </div>
   );
 };
