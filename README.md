@@ -92,7 +92,11 @@ Metamask : https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehle
 
 2- Install and run Ganache. Play with it a little to understand how it works. Then git clone the boilerpplate application under _TP2-Dapp_. Inside, run _npm install_ to install the truffle dependencies, then _cd app_ which is the frontend and _npm install_ again to install the frontend dependencies.
 
-3- Back in Ganache, under contracts, you should see "NO PROJECTS IN WORKSPACE", click "Link truffle projects" and select the folder containing **truffle-config.js**.
+3- Back in Ganache, under _contracts_, you should see "NO PROJECTS IN WORKSPACE".
+Click the little wheel in the upper right corner of Gache to open the settings.
+In the _WORKSPACE_ tab, click _Add project_ and select the folder containing **truffle-config.js**.
+In the _SERVER_ tab, verifiy that the _PORT NUMBER_ is set to _8545_
+Save and restart.
 In the source code under contracts, notice the HelloWorld.sol smart contract from the previous TD in the folder **contracts**. To compile it, run **truffle compile** in the terminal. Notice the HelloWorld contract now appears in Ganache under the Contracts tab as **Not Deployed**
 To deploy it, run **truffle migrate --reset** in the terminal. Notice in ganache that the Current Block Number has increased and that HelloWorld now shows a deployement address. Now run the frontend from the app folder. On http://localhost:3000/ you should see your active account and balance (corresponding to first account in Ganache Accounts).
 
